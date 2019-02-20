@@ -8,8 +8,8 @@ server:
 mybatis:
   config-location: classpath:mybatis/mybatis.config.xml        # mybatis配置文件所在路径
   type-aliases-package: cn.zzsxt.beans    # 所有Entity别名类所在包
-  mapper-locations: classpath:mybatis/mappers/**/*.xml                       # mapper映射文件
-
+  mapper-locations:
+  - classpath: mybatis/mappers/**/*.xml
 spring:
   profiles:dev
   application:
@@ -37,7 +37,7 @@ info:
   app.name: zzsxt-microservicecloud
   company.name: www.zzsxt.cn
   build.artifactId: $project.artifactId$
-  build.version: $project.version$ 
+  build.version: $project.version$
 ---
 server:
   port: 8002
@@ -45,7 +45,8 @@ server:
 mybatis:
   config-location: classpath:mybatis/mybatis.config.xml        # mybatis配置文件所在路径
   type-aliases-package: cn.zzsxt.beans    # 所有Entity别名类所在包
-  mapper-locations: classpath:mybatis/mappers/**/*.xml                       # mapper映射文件
+  mapper-locations:
+   - classpath: mybatis/mappers/**/*.xml                       # mapper映射文件
 
 spring:
   profiles:test
@@ -74,4 +75,4 @@ info:
   app.name: zzsxt-microservicecloud
   company.name: www.zzsxt.cn
   build.artifactId: $project.artifactId$
-  build.version: $project.version$  
+build.version: $project.version$
