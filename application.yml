@@ -1,13 +1,13 @@
 spring:
-profiles:
-active: dev
+    profiles:
+        active: dev
 ---
 spring:
-profiles: dev #开发环境
-application:
-name:microservicecloud-config-zzsxt-dev
+    profiles: dev #开发环境
+    application:
+        ame: microservicecloud-config-zzsxt-dev
 ---
 spring:
-profiles: test #测试环境
-application:
-name:microservicecloud-config-zzsxt-test
+    profiles: test #测试环境
+        application:
+            name: microservicecloud-config-zzsxt-test
